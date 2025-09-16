@@ -11,6 +11,11 @@ Key features:
 
 This Chaincode is written in Go and uses the Fabric Contract API.
 
+## Structure
+
+./src: directory contains the Go source code for the Chaincode.
+./script: directory contains scripts for deployment and testing. Just run setup.sh and copy the config.yaml to backend.
+
 ## Dependencies
 - Go 1.21+
 - github.com/hyperledger/fabric-contract-api-go v1.2.2
