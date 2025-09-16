@@ -1,20 +1,21 @@
 package main
+
 // To setup chaincode
 
 import (
-    "log"
+	"log"
 
-    "github.com/hyperledger/fabric-contract-api-go/contractapi"
-	"github.com/ZJURateTeam/ZJURate-backend/chaincode/contract"
+	"github.com/ZJURateTeam/ZJURate-chaincode/src/contract"
+	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
 func main() {
-    chaincode, err := contractapi.NewChaincode(&contract.ReviewContract{})
-    if err != nil {
-        log.Panicf("Error creating chaincode: %v", err)
-    }
+	chaincode, err := contractapi.NewChaincode(&contract.ReviewContract{})
+	if err != nil {
+		log.Panicf("Error creating chaincode: %v", err)
+	}
 
-    if err := chaincode.Start(); err != nil {
-        log.Panicf("Error starting chaincode: %v", err)
-    }
+	if err := chaincode.Start(); err != nil {
+		log.Panicf("Error starting chaincode: %v", err)
+	}
 }
